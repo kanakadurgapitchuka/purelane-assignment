@@ -1,0 +1,214 @@
+<section class="purelane-hero" id="top">
+  <div class="purelane-hero__inner">
+
+    <div class="purelane-hero__badges">
+      <div class="purelane-badge">
+        <span class="purelane-badge__icon">🌿</span>
+        <span>Plant<br>powered</span>
+      </div>
+
+      <div class="purelane-badge">
+        <span class="purelane-badge__icon">🛡️</span>
+        <span>Safe for<br>kids & pets</span>
+      </div>
+
+      <div class="purelane-badge">
+        <span class="purelane-badge__icon">◯</span>
+        <span>Zero harsh<br>chemicals</span>
+      </div>
+    </div>
+
+    <div class="purelane-hero__copy">
+      <p class="purelane-eyebrow">PURE CLEANING. SIMPLY.</p>
+
+      <h1>
+        Tough on grime.<br>
+        Gentle on everything else.
+      </h1>
+
+      <p class="purelane-description">
+        Effective cleaning powered by nature, made for Indian homes.
+      </p>
+
+      <a href="#shop" class="purelane-button">
+        Shop bestsellers →
+      </a>
+    </div>
+
+    <div class="purelane-hero__offer">
+      <span>Any 3 products</span>
+      <strong>₹499</strong>
+      <del>₹897</del>
+      <small>Save ₹398</small>
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+.purelane-hero {
+  min-height: 680px;
+  padding: 120px 24px 70px;
+  display: flex;
+  align-items: center;
+  color: #ece6f7;
+  background:
+    linear-gradient(178deg, #1ea38d 0%, #0b8578 25%, #017069 50%, #4b3a8f 75%, #01524e 100%);
+  overflow: hidden;
+}
+
+.purelane-hero__inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.purelane-hero__badges {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 14px;
+}
+
+.purelane-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid rgba(236,230,247,.16);
+  border-radius: 16px;
+  background: rgba(236,230,247,.10);
+  backdrop-filter: blur(18px);
+  font-size: 12px;
+  line-height: 1.15;
+}
+
+.purelane-badge__icon {
+  font-size: 22px;
+}
+
+.purelane-eyebrow {
+  margin: 0 0 16px;
+  color: #f0a03c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.purelane-hero h1 {
+  margin: 0;
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: clamp(46px, 7vw, 92px);
+  line-height: .9;
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.purelane-description {
+  max-width: 500px;
+  margin: 24px 0 0;
+  color: rgba(236,230,247,.72);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.purelane-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #f0a03c;
+  color: #08211a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.purelane-button:hover {
+  transform: translateY(-2px);
+}
+
+.purelane-hero__offer {
+  padding: 36px;
+  border: 1px solid rgba(236,230,247,.16);
+  border-radius: 28px;
+  background: rgba(236,230,247,.10);
+  backdrop-filter: blur(18px);
+  text-align: center;
+}
+
+.purelane-hero__offer span {
+  display: block;
+  font-size: 14px;
+}
+
+.purelane-hero__offer strong {
+  display: inline-block;
+  margin-top: 8px;
+  color: #f0a03c;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.purelane-hero__offer del {
+  margin-left: 8px;
+  opacity: .5;
+}
+
+.purelane-hero__offer small {
+  display: block;
+  margin-top: 10px;
+  color: #f0a03c;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .purelane-hero {
+    min-height: auto;
+    padding: 100px 18px 50px;
+  }
+
+  .purelane-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .purelane-hero__badges {
+    grid-column: auto;
+    flex-wrap: wrap;
+  }
+
+  .purelane-badge {
+    flex: 1 1 140px;
+  }
+
+  .purelane-hero h1 {
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  .purelane-hero__offer {
+    justify-self: stretch;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Purelane Hero",
+  "tag": "section",
+  "class": "purelane-hero-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purelane Hero"
+    }
+  ]
+}
+{% endschema %}
